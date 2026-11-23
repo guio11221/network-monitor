@@ -1,0 +1,24 @@
+{
+  "name": "network-monitor-server",
+  "private": true,
+  "version": "0.5.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --import tsx --test src/*.test.ts"
+  },
+  "dependencies": {
+    "@fastify/websocket": "^11.3.7",
+    "better-sqlite3": "^13.2.0",
+    "fastify": "^5.12.8",
+    "fast-xml-parser": "^5.2.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.15.30",
+    "tsx": "^4.20.3"
+  }
+}
